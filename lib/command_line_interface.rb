@@ -12,5 +12,5 @@ end
 
 def get_search_option
   puts "Enter 'movies' to see movies, or 'planet' to see home planet."
-  get.downcase.chomp
+  gets.downcase.chomp
 end

@@ -49,6 +49,13 @@ def show_character_movies(character)
   end
 end
 
+def get_home_planet(character)
+  character_info = get_character_hash(character)
+  home_planet_url = character_info["homeworld"]
+  planet_name = get_hash_from_api(home_planet_url)["name"]
+  puts "#{character} is from #{planet_name}"
+end
+
 ## BONUS
 
 # that `get_character_movies_from_api` method is probably pretty long. Does it do more than one job?

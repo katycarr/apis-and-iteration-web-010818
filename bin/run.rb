@@ -10,14 +10,16 @@ while character != "exit"
     puts "Not found."
   else
     option = get_search_option
-    while option != "movies" || option != "planet"
+    while option != "movies" && option != "planet"
       puts "Try again!"
       option = get_search_option
     end
     if option == "movies"
       show_character_movies(character)
-    else option == "planet"
+    else
       # home planet method here
+      get_home_planet(character)
+    end
   end
   character = get_character_from_user
 end
